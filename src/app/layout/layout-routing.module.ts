@@ -23,7 +23,7 @@ const routes: Routes = [
       //拉出來獨立一個Route
       //ChartsRoute
 
-      //直接展開
+      //直接展開 變更一下
       // { path: 'charts',
       //     children: [
       //       { path: 'flot', component: FlotComponent },
