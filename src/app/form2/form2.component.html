@@ -1,4 +1,14 @@
         <section>
+            <pre>{{
+                  {
+                    value: form.controls.title.value,
+                    errors: form.controls.title.errors,
+                    valid: form.controls.title.valid,
+                    dirty: form.controls.title.dirty,
+                    touched: form.controls.title.touched
+                  } | json
+                }}
+            </pre>
           <div class="container-fluid">
             <h5 class="mt0">Classic form controls and custom variants</h5>
             <div class="card">

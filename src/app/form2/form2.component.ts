@@ -1,5 +1,6 @@
 import { FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
+import { MyNameValidator, ValidatorWithParams } from '../validators/myname.validator';
 
 @Component({
   selector: 'app-form2',
@@ -16,7 +17,7 @@ export class Form2Component implements OnInit {
   form:any;
   ngOnInit() {
     this.form = this.fb.group({
-      'title': ['123', [Validators.required,Validators.maxLength(10)]],
+      'title': ['123', [Validators.required,Validators.maxLength(10), MyNameValidator, ValidatorWithParams('pica')]],
       'subTitle': ['456', Validators.required],
       'types':this.fb.array(
         this.types.map((value, index)=>
