@@ -28,16 +28,17 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## 路由守門員
 
-ng g gurad needLogin
-實作程式碼
-if (next.queryParams["apikey"] == "ken"){
-  return true;
-}
-else{
-  this.router.navigateByUrl("/login");
-  return false;
-}
+ng g gurad needLogin  
+實作程式碼  
+if (next.queryParams["apikey"] == "ken"){  
+  return true;  
+}  
+else{  
+  this.router.navigateByUrl("/login");  
+  return false;  
+}  
 
 ## Form
 
-'#f="ngModel"' 範本變數
+'#f="ngModel"' 範本變數  
+novalidate 關閉form預設驗證提示
