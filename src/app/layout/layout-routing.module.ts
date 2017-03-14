@@ -5,7 +5,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { CardsComponent } from './../cards/cards.component';
 import { DashboardComponent } from './../dashboard/dashboard.component';
 import { FlotComponent } from './../charts/flot/flot.component';
-//import { ChartsRoute } from './../charts/charts-routing.module';
+
+import { NeedLoginGuard } from './../need-login.guard';
 
 const routes: Routes = [
   { path: '', component:LayoutComponent,
@@ -17,7 +18,8 @@ const routes: Routes = [
       {
         path:'charts',
         //延遲載入
-        loadChildren: '../charts/charts.module#ChartsModule'
+        loadChildren: '../charts/charts.module#ChartsModule',
+        canActivate: [NeedLoginGuard]
       }
 
       //拉出來獨立一個Route
