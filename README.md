@@ -25,3 +25,15 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## 路由守門員
+
+ng g gurad needLogin
+實作程式碼
+if (next.queryParams["apikey"] == "ken"){
+  return true;
+}
+else{
+  this.router.navigateByUrl("/login");
+  return false;
+}
