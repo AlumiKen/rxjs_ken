@@ -1,3 +1,5 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormComponent } from './../form/form.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -10,12 +12,15 @@ import { LayoutRoutingModule } from './layout-routing.module';
 @NgModule({
   imports: [
     CommonModule,
-    LayoutRoutingModule
+    LayoutRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   declarations: [
     LayoutComponent,
     DashboardComponent,
-    CardsComponent
+    CardsComponent,
+    FormComponent
   ]
 })
 export class LayoutModule { }

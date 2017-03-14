@@ -37,3 +37,7 @@ else{
   this.router.navigateByUrl("/login");
   return false;
 }
+
+## Form
+
+'#f="ngModel"' 範本變數

@@ -1,3 +1,4 @@
+import { FormComponent } from './../form/form.component';
 import { LayoutComponent } from './layout.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -20,7 +21,9 @@ const routes: Routes = [
         //延遲載入
         loadChildren: '../charts/charts.module#ChartsModule',
         canActivate: [NeedLoginGuard]
-      }
+      },
+      { path: 'form', component:FormComponent},
+
 
       //拉出來獨立一個Route
       //ChartsRoute
