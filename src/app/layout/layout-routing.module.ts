@@ -1,3 +1,4 @@
+import { Form2Component } from './../form2/form2.component';
 import { FormComponent } from './../form/form.component';
 import { LayoutComponent } from './layout.component';
 import { NgModule } from '@angular/core';
@@ -22,7 +23,7 @@ const routes: Routes = [
         loadChildren: '../charts/charts.module#ChartsModule',
         canActivate: [NeedLoginGuard]
       },
-      { path: 'form', component:FormComponent},
+      { path: 'form', component:Form2Component},
 
 
       //拉出來獨立一個Route

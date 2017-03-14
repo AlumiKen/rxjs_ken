@@ -13,6 +13,7 @@ import { LayoutModule } from './layout/layout.module';
 import { LayoutComponent } from './layout/layout.component';
 import { LoginComponent } from './login/login.component';
 import { NeedLoginGuard } from './need-login.guard';
+import { Form2Component } from './form2/form2.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { NeedLoginGuard } from './need-login.guard';
     Page1Component,
     Page2Component,
     LoginComponent,
+    Form2Component,
   ],
   imports: [
     BrowserModule,
