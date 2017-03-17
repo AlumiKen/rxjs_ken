@@ -1,0 +1,45 @@
+<p #p>
+
+</p>
+
+<app-advcomp1-header #myheader>
+  <table class="calendar-header-table" Cheader #Cheader>
+      <thead>
+          <tr>
+              <td *ngFor="let col of ['日','一','二','三','四','五','六']" text-center>星期{{col}}</td>
+          </tr>
+      </thead>
+  </table>
+
+  <table class="calendar-cell-table" Cbody #Cbody>
+      <tbody>
+          <tr *ngFor="let rowIndex of views[0].rowOffsets">
+              <td *ngFor="let col of [0,1,2,3,4,5,6]" [ngClass]="{'isToday':views[0].days[rowIndex + col].isToday}">
+                  <app-advcomp-part [dateInfo]="views[0].days[rowIndex + col]">
+                    {{views[0].days[rowIndex + col].date.getDate()}}
+                  </app-advcomp-part>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+
+  <!--只抓得到直接掛在底下的compoent, 包在其他tag內的都抓不到-->
+  <app-advcomp-part>
+      1
+  </app-advcomp-part>
+  <app-advcomp-part>
+      2
+  </app-advcomp-part>
+</app-advcomp1-header>
+
+<!--<app-advcomp1-header #myheader2>
+  <table border="1">
+    <tr>
+      <td>111</td>
+      <td>222</td>
+      <td>333</td>
+    </tr>
+  </table>
+  [ngClass]="{'isToday':views[0].days[rowIndex + col].isToday}"
+  {{views[0].days[rowIndex + col].date.getDate()}}
+</app-advcomp1-header>-->

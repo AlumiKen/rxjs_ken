@@ -1,3 +1,4 @@
+import { Advcomp1Component } from './advcomp1/advcomp1.component';
 import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, Route, RouterModule, Routes } from '@angular/router';
@@ -10,6 +11,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { fallbackRoute } from './page1/fallback.Route';
 
 const routes: Routes = [
+  { path: 'adv', component: Advcomp1Component },
   { path: 'login', component: LoginComponent },
 
   fallbackRoute
