@@ -1,3 +1,4 @@
+import { Test1Directive } from '../test1.directive';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormComponent } from './../form/form.component';
 import { NgModule } from '@angular/core';
@@ -14,13 +15,14 @@ import { LayoutRoutingModule } from './layout-routing.module';
     CommonModule,
     LayoutRoutingModule,
     FormsModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   declarations: [
     LayoutComponent,
     DashboardComponent,
     CardsComponent,
-    FormComponent
+    FormComponent,
+    Test1Directive
   ]
 })
 export class LayoutModule { }

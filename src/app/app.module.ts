@@ -17,6 +17,7 @@ import { Form2Component } from './form2/form2.component';
 import { Advcomp1Component } from './advcomp1/advcomp1.component';
 import { Advcomp1HeaderComponent } from './advcomp1-header/advcomp1-header.component';
 import { AdvcompPartComponent } from './advcomp-part/advcomp-part.component';
+import { Test1Directive } from './test1.directive';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { AdvcompPartComponent } from './advcomp-part/advcomp-part.component';
     Form2Component,
     Advcomp1Component,
     Advcomp1HeaderComponent,
-    AdvcompPartComponent,
+    AdvcompPartComponent
   ],
   imports: [
     BrowserModule,
